@@ -57,8 +57,6 @@ def part2(file_name):
         digits = int(stripped_line[0] + stripped_line[-1])
         calibration_values.append(digits)
 
-    print(calibration_values[36])
-
     return sum(calibration_values)
 
 
