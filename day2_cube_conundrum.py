@@ -85,8 +85,6 @@ def part2(file_name):
     return power_sum
 
 
-
-
 if __name__ == "__main__":
     print(part1("day2_input.txt"))
     print(part2("day2_input.txt"))
