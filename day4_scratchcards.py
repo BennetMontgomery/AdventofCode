@@ -86,7 +86,6 @@ def calculate_cards(card_matrix):
         return 1 # base case
 
 
-
 if __name__ == "__main__":
     print(part1("day4_input.txt"))
     print(part2("day4_input.txt"))
