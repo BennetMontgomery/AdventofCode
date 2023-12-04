@@ -49,7 +49,6 @@ def part2(file_name):
     # winnings of each card in a card_counter
     card_counter = 0
     for card_index in range(len(card_matrix)):
-        print(f"counting card {card_index+1}")
         card_counter += calculate_cards(card_matrix[card_index:])
 
     return card_counter
