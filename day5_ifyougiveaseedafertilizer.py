@@ -195,7 +195,6 @@ def part2(file_name):
 
 
             # combine our range sets and dump out any duplicates
-            # merged_ranges = list(range_ for range_, _ in itertools.groupby(true_ranges + new_ranges))
             merged_ranges = [list(range_) for range_ in set(map(tuple, true_ranges + new_ranges))]
             # now we need to merge overlapping ranges. If we don't do this the number of ranges being tracked will
             # explode exponentially
@@ -204,7 +203,7 @@ def part2(file_name):
             while len(merged_ranges) > 1:
                 if merged_ranges[0][1] >= merged_ranges[1][0] and merged_ranges[0][1] <= merged_ranges[1][1]:
                     merged_ranges[0][1] = merged_ranges[1][1] # merge overlapping ranges
-                    merged_ranges.pop(1) # pop second range, as it is no accounted for in first range
+                    merged_ranges.pop(1) # pop second range, as it is now accounted for in first range
                 elif merged_ranges [0][1] < merged_ranges[1][0]:
                     ranges.append(merged_ranges[0]) # pop the first element if not overlapping with the 2nd
                     merged_ranges.pop(0)
